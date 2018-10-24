@@ -1,0 +1,685 @@
+<html lang="en" >
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Angular Material style sheet -->
+
+  <title>#SummerDevDays | UNISA, 01 - 02 December 2018</title>
+
+  <link href="style.css" rel="stylesheet" id="bootstrap-css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="icon" href="https://geekulcha.com/assets/icons/favicon.ico">
+
+  <script>
+      // Array of words
+      var words = ['In computing, linked data (often capitalized as Linked Data) is a method of publishing structured data so that it can be interlinked and become more useful through semantic queries',
+                   'SA is behind on its commitments to make "open data" more easily accessible to its citizens, despite having signed an undertaking to do so.',
+                   'Open Data is a practice that makes machine-readable data freely available, easy to access, and most importantly, simple to reuse.',
+                   'Technology has provided the capability to distribute large amounts of data and information through many different platforms on a vast array of subjects.',
+                   'Datasets should be as complete as possible, reflecting the entirety of what is recorded about a particular subject.',
+                   'Public data is data that is not subject to valid privacy, security or privilege limitations.',
+                   'Data should be made available at a stable Internet location indefinitely and in a stable data format for as long as possible.',
+                   'Documentation about the format and meaning of data goes a long way to making the data useful.'];
+      // Function that executes every 2000 milliseconds
+      var t = setInterval(function() {
+        // Random number generator
+        var randomNumber = Math.round( Math.random() * (words.length-1) );
+        // Change the word in the span for a random one in the array of words
+        $('#changing').html( words[ randomNumber ] );
+      }, 5000);
+      </script>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="devtools.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+<style>
+a {color: #ff0000;}
+a:hover {color: #000;}
+.md-sidenav {width: 100%;}
+@media (min-width: 600px) {
+.md-sidenav {
+    max-width: 100%;
+}
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+       // window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+<meta name="description" content="#SummerDevDays provides a platform for aspiring individuals and programmers a platform to learn a new skill (languages and tools) through the community and from the seasoned developers in the industry.">
+<meta name="keywords" content="Geekulcha, Geeks, UNISA, youth, South African Geeks, digital, code, hackathons">
+<meta name="author" content="Geekulcha">
+
+<meta property="og:site_name" content="#SummerDevDays 2018" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Summer Dev Days" />
+<meta property="og:description" content="#SummerDevDays provides a platform for aspiring individuals and programmers a platform to learn a new skill (languages and tools) through the community and from the seasoned developers in the industry." />
+<meta property="og:url" content="https://summerdevdays.github.io" />
+<meta property="og:image" content="https://summerdevdays.github.io/images/cover.png" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="#SummerDevDays 2018" />
+<meta name="twitter:description" content="#SummerDevDays provides a platform for aspiring individuals and programmers a platform to learn a new skill (languages and tools) through the community and from the seasoned developers in the industry." />
+<meta name="twitter:url" content="https://summerdevdays.github.io" />
+<meta name="twitter:image:src" content="https://summerdevdays.github.io/images/cover.png" />
+
+
+</head>
+<body ng-app="SummerDevApp" ng-cloak>
+  <!--
+    Your HTML content here
+  -->  
+
+  <div class="center">
+        <a href='#register'>REGISTER</a>
+      </div>
+
+ 
+  <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                
+                
+                   <!-- <div class="top-title">
+                        <h1 class="animated infinite bounceInDown">you’ll look
+                        better with us</h1>
+                        <h6 class="logo-title animated pulse">Co-operation is the best solution</h6>
+                    </div> -->
+                </div>
+                <div class="col-md-4">
+                    <div class="menu">
+                     <div class="">   <img class="img-circle" src="https://yt3.ggpht.com/a-/ACSszfFdXroT-GdNOaV40bxyQdmyP9DHQYgIeWUoSQ=s900-mo-c-c0xffffffff-rj-k-no" height="35px" width="35px" style="float: left;">
+                      <h4 class="brand"><b> &nbsp;#SummerDevDays</b></h4></div>
+                        <li class="f-item-1"><a href="#about"><i class="fa fa-info"></i> What's This About?</a></li>
+                        <li class="f-item-3"><a href="#hackathons"><i class="fa fa-file-code"></i> Hackathons</a></li>
+                        <li class="f-item-4"><a href="#clinic"><i class="fa fa-bug"></i> Code Clinic</a></li>
+                        <li class="f-item-5"><a href="#info"><i class="fa fa-tag"></i> Info Zone</a></li>
+                        <li class="f-item-4"><a href="#register"><i class="fa fa-calendar"></i> Register Now!</a></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="demo" id="about">
+      <div class="container"><br><br><br><br>
+          <h2>What #SummerDevDays is about...</h2>
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="main-timeline6">
+                      <div class="timeline">
+                          <div class="timeline-content">
+                              <span class="year">Learn from Others</span>
+                              <div class="content-inner">
+                                  <span class="icon"><i class="fa fa-users"></i></span>
+                                  <h3 class="title">Peers and Industry</h3>
+                                  <p class="description">
+                                      A community of developers or beginners like yourself to help each other and even from the industry leaders. <br><br>
+                                      There is a Code Clinic for your needs.
+                                  </p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="timeline">
+                          <div class="timeline-content">
+                              <span class="year">Code The Talk</span>
+                              <div class="content-inner">
+                                  <span class="icon"><i class="fa fa-rocket"></i></span>
+                                  <h3 class="title">Munch on the Code</h3>
+                                  <p class="description">
+                                      From the year resolutions and talk of the 4th Industrial Revolution - here is a chance to put the code into it.
+                                  </p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="timeline">
+                          <div class="timeline-content">
+                              <span class="year">Industrial Exposure</span>
+                              <div class="content-inner">
+                                  <span class="icon"><i class="fa fa-briefcase"></i></span>
+                                  <h3 class="title">Discover or be Discovered</h3>
+                                  <p class="description">
+                                      Opportunities! Opportunities! Opportunities! The skill you may acquire might help you land that job - get the exposure from the weekend.
+                                  </p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="timeline">
+                          <div class="timeline-content">
+                              <span class="year">Year Resolutions</span>
+                              <div class="content-inner">
+                                  <span class="icon"><i class="fa fa-mobile"></i></span>
+                                  <h3 class="title">Just Get Started</h3>
+                                  <p class="description">
+                                      If you don't start now, you may never get started. Check out the resources below to help you get started on that tool/language.
+                                  </p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $( ".f-item-1" ).hover(function() {
+                $('.menu').css("background-color", "#8165a6");
+                }, function(){
+                $('.menu').css("background-color", "#000");
+                });
+            // f-item-2
+            $( ".f-item-2" ).hover(function() {
+                $('.menu').css("background-color", "#151719");
+                }, function(){
+                $('.menu').css("background-color", "#000");
+                });
+            // f-item-3
+            $( ".f-item-3" ).hover(function() {
+                $('.menu').css("background-color", "#151719");
+                }, function(){
+                $('.menu').css("background-color", "#000");
+            });
+            // f-item-4
+            $( ".f-item-4" ).hover(function() {
+                $('.menu').css("background-color", "#999");
+                }, function(){
+                $('.menu').css("background-color", "#000");
+            });
+            // f-item-5
+            $( ".f-item-5" ).hover(function() {
+                $('.menu').css("background-color", "#ff0000");
+                }, function(){
+                $('.menu').css("background-color", "#000");
+            });
+        });
+    </script>
+    <script>
+    $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    if (scroll >=50) {
+    $(".header").addClass("myheader");
+    } else {
+    $(".header").removeClass("myheader");
+    }
+        });
+    </script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+<div class="container" id="hackathons">
+  <br><br><br><br>
+    <div class="row">
+    <div class="col-md-3">
+      <div class="card-counter primary">
+        <i class="fa fa-code-fork"></i>
+        <span class="count-numbers">20+</span>
+        <span class="count-name">Repos</span>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card-counter danger">
+        <i class="fa fa-ticket"></i>
+        <span class="count-numbers">100+</span>
+        <span class="count-name">Instances</span>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card-counter success">
+        <i class="fa fa-code"></i>
+        <span class="count-numbers">20 000</span>
+        <span class="count-name">Lines of Code</span>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card-counter info">
+        <i class="fa fa-users"></i>
+        <span class="count-numbers">10 980</span>
+        <span class="count-name">Members</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+        <div class="container mt-40 mb-30 box-pad"> <br><br>
+            <h2 class="">Inspiration: Major Hackathons of 2018</h2><br>
+            <div class="row mt-30">
+                <div class="col-md-4 col-sm-6">
+                    <div class="box21">
+                        <img src="https://farm2.staticflickr.com/1941/31437926658_b96c04b73c_z_d.jpg" alt="">
+                        <div class="box-content">
+                            <h4 class="title">TADHack Johannesburg</h4>
+                            <p class="description">Biggest TADHack in the world took place at the MTN Innovation Centre, 13 - 14 October 2018.</p>
+                            <a class="read-more" href="https://tadhack.mtn.co.za">read more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 box-pad">
+                    <div class="box21">
+                        <img src="https://farm2.staticflickr.com/1970/31108046748_ceef0ddc07_z_d.jpg" alt="IgniteHack 2018">
+                        <div class="box-content">
+                            <h4 class="title">IgniteHack 2018</h4>
+                            <p class="description">Biggest Hackathon 2018 launched by Minister Ayanda Dlodlo with a C# application, took place at UJ 28 - 30 September.</p>
+                            <a class="read-more" href="https://ignnitehack.devpost.com">Check IgniteHack</a>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="col-md-4 col-sm-6 box-pad">
+                    <div class="box21">
+                        <img src="https://farm2.staticflickr.com/1849/42665146900_66bd43c14f_z_d.jpg" alt="4th Annual NCDevHack">
+                        <div class="box-content">
+                            <h4 class="title">4th Annual NCDevHack</h4>
+                            <p class="description">Only provincial hackathon in South Africa powered by DEDAT. NCDevHack 2018 took place in De Aar.</p>
+                            <a class="read-more" href="https://hackathon.ncdev.com">Check Out</a>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-4 col-sm-6 box-pad">
+                    <div class="box21">
+                        <img src="https://farm1.staticflickr.com/958/41568135384_b7c944185d_z_d.jpg" alt="ITWeb SS18Hack">
+                        <div class="box-content">
+                            <h4 class="title">ITWeb SS18Hack</h4>
+                            <p class="description">Focused on Machine Learning, the 2018 edition of the ITWeb Security Summit brought together 2 provinces</p>
+                            <a class="read-more" href="https://bit.ly/SS18Hack">read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 box-pad">
+                    <div class="box21">
+                        <img src="https://farm1.staticflickr.com/923/40698186275_8e9cb55ee7_z_d.jpg" alt="">
+                        <div class="box-content">
+                            <h4 class="title">SafeHack 2018</h4>
+                            <p class="description">Championing Secure by Design, over 150 techies/innovators gathered at BCX to build secure.</p>
+                            <a class="read-more" href="https://geekulcha.com/safehack">read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 box-pad">
+                    <div class="box21">
+                        <img src="https://pbs.twimg.com/media/Daw0pUQW0AczoPI.jpg" alt="Budget Data Hackathon">
+                        <div class="box-content">
+                            <h4 class="title">Budget Data Hackathon</h4>
+                            <p class="description">National Treasury and Imali Yethu hosted a budget data hackathon in Johannesburg</p>
+                            <a class="read-more" href="https://ntbdhack.gitbub.io">read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <header class="header2" id="header1">
+                <div class="circle">
+                    <div class="caption">
+                        <h2 class="title display-3">Write <strong>Clean & Quality</strong> Code</h2>
+                        <p>Code Reviewers will be available to checkout your progress and<br> judge on various categories. Mentors will provide guidance.</p>
+                    </div>		
+                </div>
+                <!-- demo only 
+                <p class="update-note">Note: There will be prizes</p> -->
+            </header>
+       
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+  
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.css">
+ <br><br><br>
+  <div ng-cloak class="container" id="clinic">
+
+        <h3 class="mt-3 pb-3 mb-4 font-italic border-bottom"><br><br>
+                Code Clinic: Tools and Specialists
+             </h3>
+
+    <div class="row">
+      <div class="col-md-3">
+
+      <md-sidenav class="md-sidenav-left md-closed ng-isolate-scope _md md-locked-open md-whiteframe-4dp" style="width: 100%;" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" md-whiteframe="4" tabindex="-1">
+
+          <md-toolbar class="md-theme-indigo _md _md-toolbar-transitions" style="background-color: rgb(13, 13, 14);
+          color: rgba(255,255,255,0.87);">
+              <div  class="md-toolbar-tools">
+            <h1><b>Get Started With:</b></h1>
+         
+        </div>
+          </md-toolbar>
+          <md-content class="ng-scope _md" style="overflow-x:hidden; padding: 0px 8px;">
+          
+              <div class="row">
+                 
+                    <div class="card" style="min-width: 100%;">
+                          
+                               <div class="gaadiex-list">
+                                 <div class="gaadiex-list-item border-b-1">
+                                     <i class="fa fa-paint-brush"></i>
+                                 <div class="gaadiex-list-item-text">
+                                   <h5><a href="https://materializecss.com/">Material Design</a></h5>
+                                   <p> Material design toolkit for websites and web apps design.</p>
+                                 </div>
+                               </div>
+                               <div class="gaadiex-list-item border-b-1">
+                                    <i class="fa fa-cogs"></i>
+                                <div class="gaadiex-list-item-text">
+                                  <h5><a href="https://machinelearningmastery.com/machine-learning-in-python-step-by-step/">Machine Learning: Step by Step</a></h5>
+                                  <p> Project Example: Machine Learning coding with Python</p>
+                                </div>
+                              </div>
+                             
+                                           
+                                                     <div class="gaadiex-list-item border-b-1">
+                                     <i class="fa fa-microchip"></i>
+                                 <div class="gaadiex-list-item-text">
+                                   <h5><a href="https://www.digikey.com/en/maker/blogs/2018/how-to-get-started-with-arduino">Around Arduino</a></h5>
+                                   <p> Start making with the Arduino Microcontroller</p>
+                                 </div>
+                               </div>
+                               <div class="gaadiex-list-item border-b-1">
+                                    <i class="fa fa-btc"></i>
+                                <div class="gaadiex-list-item-text">
+                                  <h5><a href="https://hackernoon.com/a-beginners-guide-to-blockchain-programming-4913d16eae31">Blockchain Coding</a></h5>
+                                  <p> A beginner's guide to Blockchain and how to code for it.</p>
+                                </div>
+                              </div>  
+                              <div class="gaadiex-list-item border-b-1">
+                                    <i class="fa fa-code"></i>
+                                <div class="gaadiex-list-item-text">
+                                  <h5><a href="http://www.tutorialsteacher.com/nodejs/nodejs-tutorials">Node Js</a></h5>
+                                  <p> Node.js walk through with examples</p>
+                                </div>
+                              </div>               
+           
+           
+           
+                               </div>
+           
+                       </div>
+                 
+                </div>
+            
+          </md-content>
+    
+        </md-sidenav>
+      </div>
+        <div class="col-md-9 col-sm-6">
+      <md-content>
+        <md-tabs md-dynamic-height md-border-bottom>
+          <md-tab label="Web Development">
+            <md-content class="md-padding">
+              <!-- header #1 -->
+<!-- post #1 -->
+<div class="post" id="post1">
+        <div class="caption">
+  
+            <div class="text">
+                <h4>Web Development</h4>
+                <p>A website is a collection of related web pages, including multimedia content, 
+                    typically identified with a common domain name, and published on at least one web server.
+                </p>
+                       <h6>Resources</h6>
+                        <div class="tags">
+                            <a href="https://www.w3schools.com">w3schools</a> <a href="https://wordpress.com/">Wordpress</a>
+                            <a href="http://angular.io">Angular</a> <a href="http://www.picmonkey.com">Pic Monkey</a> <a href="https://www.tutorialspoint.com/asp.net/">ASP.NET</a> <a href="https://getbootstrap.com/">Bootstrap</a>
+                            
+                        </div>
+                    
+               
+            </div>
+        </div><!-- / .caption -->
+        <div class="category">#WebDevs</div>
+        <div class="content">
+            <img src="images/web.png" class="img" alt="">
+        </div><!-- / .content -->
+    </div>
+
+
+            </md-content>
+          </md-tab>
+          <md-tab label="Mobile Apps">
+            <md-content class="md-padding">
+                    <div class="post" id="post1">
+                            <div class="caption">
+                                    <h4>Mobile Apps</h4>
+                                    <p>A mobile app or mobile application is a computer program designed to run on a mobile device such as a phone/tablet or watch.
+                                    </p>
+                                           <h6>Resources</h6>
+                                            <div class="tags">
+                                                <a href="https://developer.android.com/guide/slices/getting-started#java">Android: Java and Kotlin</a> <a href="https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/">Swift</a>
+                                                <a href="http://www.mobile-patterns.com/">Mobile Patterns</a> <a href="https://wireframe.cc/">Wireframe</a>
+                           </div>
+                                            </div><!-- / .caption -->
+                            <div class="category">#MobileNinjas</div>
+                            <div class="content">
+                                <img src="images/mobile.png" class="img" alt="">
+                            </div><!-- / .content -->
+                        </div>
+            </md-content>
+          </md-tab>
+   
+          <md-tab label="Internet of Things (IoT)">
+          
+                <div class="post" id="post1">
+                        <div class="caption">
+                                <h4>Internet of Things(IoT)</h4>
+                                <p>The Internet of things is the network of physical devices, vehicles, home appliances, and other items embedded with electronics, software, sensors, actuators, and 
+                                    connectivity which enables these things to connect, collect and exchange data.
+                                </p>
+                                       <h6>Resources</h6>
+                                        <div class="tags">
+                                            <a href="https://trickiknow.com/raspberry-pi-3-complete-tutorial-2018-lets-get-started/">Raspberry Pi</a> <a href="https://www.arduino.cc/en/Guide/ArduinoUno">Arduino</a>
+                                            <a href="https://www.blynk.cc/">Blynk</a> <a href="https://thingspeak.com/">ThingSpeak</a>
+                                           
+                                        </div>
+                        </div><!-- / .caption -->
+                        <div class="category">#IoT</div>
+                        <div class="content">
+                            <img src="images/iot.png" class="img" alt="">
+                        </div><!-- / .content -->
+                    </div>
+
+          </md-tab>
+          <md-tab label="Machine Learning">
+              <md-content class="md-padding">
+                    <div class="post" id="post1">
+                            <div class="caption">
+                                    <h4>Machine Learning</h4>
+                                    <p>A field of Artificial Intelligence(AI) that uses statistical techniques to give computer systems the ability to "learn" from data, without being explicitly programmed. 
+                                        The name machine learning was coined in 1959 by Arthur Samuel.
+                                    </p>
+                                           <h6>Resources</h6>
+                                            <div class="tags">
+                                                <a href="https://github.com/tensorflow/tensorflow">TensorFlow</a>
+                                                <a href="https://medium.com/machine-learning-in-practice/my-curated-list-of-ai-and-machine-learning-resources-from-around-the-web-9a97823b8524">Resource List</a>
+                                            </div>
+                            </div><!-- / .caption -->
+                            <div class="category">#MachineLearning</div>
+                            <div class="content">
+                                <img src="images/ml.png" class="img" alt="">
+                            </div><!-- / .content -->
+                        </div>
+            </md-content>
+            </md-tab>
+            <md-tab label="Information Security">
+                    <md-content class="md-padding">
+                            <div class="post" id="post1">
+                                    <div class="caption">
+                                            <h4>Information Security</h4>
+                                            <p>Computer security, cybersecurity, or IT security is the protection of computer systems from theft or damage to their hardware, software or 
+                                                electronic data, as well as from disruption or misdirection of the services they provide.
+                                            </p>
+                                                   <h6>Resources</h6>
+                                                    <div class="tags">
+                                                        <a href="https://www.owasp.org/">OWASP</a> <a href="https://gist.github.com/mubix/5737a066c8845d25721ec4bf3139fd31">Reading Material</a>
+                                                        <a href="https://medium.com/secjuice/how-to-start-your-career-in-any-field-related-to-information-security-841adcf20901">Ethical Hacking</a>
+                                                     
+                                                    </div>
+                                    </div><!-- / .caption -->
+                                    <div class="category">#InfoSecurity</div>
+                                    <div class="content">
+                                        <img src="images/security.png" class="img" alt="">
+                                    </div><!-- / .content -->
+                                </div>
+                    </md-content>
+                  </md-tab>
+            <md-tab label="Blockchain">
+                <md-content class="md-padding">
+                        <div class="post" id="post1">
+                                <div class="caption">
+                                   
+                                <h4>Blockchain</h4>
+                                        <p>A blockchain, originally block chain, is a growing list of records, called blocks, which are linked using cryptography. Each block contains a cryptographic hash of the previous block, a timestamp, 
+                                            and transaction data
+                                        </p>
+                                               <h6>Resources</h6>
+                                                <div class="tags">
+                                                    <a href="https://www.blockchain.com/">Blockchain</a> <a href="https://medium.com/programmers-blockchain/create-simple-blockchain-java-tutorial-from-scratch-6eeed3cb03fa">Java Code</a>
+                                                    <a href="https://www.openchain.org/">OpenChain (Enterprise)</a> <a href="https://exonum.com/">Exonum</a> 
+                                                  
+                                                </div>
+
+                                </div><!-- / .caption -->
+                                <div class="category">#Blockchain</div>
+                                <div class="content">
+                                    <img src="images/blockchain.png" class="img" alt="">
+                                </div><!-- / .content -->
+                            </div>
+                </md-content>
+              </md-tab>
+            
+        </md-tabs>
+      </md-content>
+    </div>
+
+    </div>
+  </div>
+
+    <div class="container" id="info">
+<br><br><br>
+        <h3 class="mt-3 pb-3 mb-4 font-italic border-bottom">
+           The Venue and Information Board
+        </h3>
+        <div class="row">
+           <div class="col-md-8">
+              <div class="card mb-4 bg-dark text-white">
+                 <img class="card-img" src="images/unisa.png" alt="UNISA">
+                 <div class="card-img-overlay">
+                    <h5 class="card-title">UNISA Muckleneuk Campus, Kgorong Building</h5>
+                    <p class="card-text">The Summer Dev Days is powered by the UNISA School of Computing (Pro Bono) and as such, will take place at the Pretoria campus: <br>
+
+                    <Address>Address: Preller St, Muckleneuk, Pretoria, 0002</Address>
+                    </p>
+                    <a href="https://www.google.co.za/maps/dir/-25.7584507,28.2038662/unisa+muckleneuk+campus+physical+address/@-25.7630547,28.1975294,16z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x1e95622ed874dd3b:0x5dd5fd3968be268b!2m2!1d28.1992637!2d-25.7676588" class="btn btn-danger"><i class="fa fa-map-marker"></i> Navigate to UNISA</a>
+                 </div>
+              </div>
+           </div>
+           <div class="col-md-4">
+              <div class="card mb-4 bg-dark text-white">
+                 <img class="card-img" src="images/info.png" alt="InfoBoard">
+                 <div class="card-img-overlay">
+                    <h5 class="card-title"><i class="fa fa-info"></i> Information Board</h5>
+                    <p class="card-text"> <span id="changing">Scroll down to the last secion to register for #SummerDevDays</span></p>
+                   
+                 </div>
+              </div>
+           </div>
+        </div>
+       
+       
+        </div>
+
+        <section class="feature-service-one section-padding-100" id="register">
+            <div class="container">
+                <div class="row equal-height-row">
+                    <div class="col-md-12 col-lg-offset-1">
+                        <div class="valign-wrapper">
+                            <div class="valign-cell equal-height-column " style="height: 309px;"><br><br><br><br><br>
+                                <h1 class="text-size-100 text-white margin-left-15 text-center"><b>Registration is Open</b></h1>
+                                <br><br>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div> <!-- /.row -->
+            </div>
+        </section>
+
+        
+                    <div class="register">
+                            <div class="row">
+                                <div class="col-md-3 register-left">
+                                    <img src="https://ubisafe.org/images/transparent-fire-white-4.png" alt=""/>
+                                    <h3>Register Now!</h3>
+                                    <p><b>#SummerDevDays</b> is FREE to attend, be sure to register.</p><hr />
+                                    <p>#FillUpUNISA #FestiveCode</p>
+                                    <a class="btn btn-danger read-more" href="https://ntbdhack.gitbub.io"><i class="fa fa-twitter"></i> Tweet #SummerDevDays</a><br/>
+                                </div>
+                                <div class="col-md-9 register-right">
+                                
+                                    <div class="tab-content" id="myTabContent1">
+                                        <br>
+                                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeosA4alwf-8gEi5X4FpA4YEtnbqf7DmE9SVOwWvvZvtt5_Xw/viewform?embedded=true" style="width: 100%;" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                                       <br>
+                                      
+                                    </div>
+                                </div>
+                            </div>
+            
+                        </div>
+       
+  
+  
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-messages.min.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.js"></script>
+  
+  <!-- Your application bootstrap  -->
+  <script type="text/javascript">    
+    /**
+     * You must include the dependency on 'ngMaterial' 
+     */
+    angular.module('SummerDevApp', ['ngMaterial', 'ngMessages']);
+
+  </script>
+
+</body>
+</html>
